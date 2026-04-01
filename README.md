@@ -15,7 +15,6 @@ It searches the web for real recipes, fetches full instructions, and remembers y
 - **LangChain** — agent framework
 - **LangGraph** — memory and conversation management
 - **Google Gemini 2.5 Flash** — vision model (image understanding)
-- **Groq / LLaMA 3.3 70B** — language model
 - **Tavily** — web search
 - **BeautifulSoup** — full recipe page fetching
 
@@ -33,6 +32,26 @@ TAVILY_API_KEY=...
 GROQ_API_KEY=...
 ```
 4. Open `notebooks/module-1/Personal Chef AI Agent.ipynb` in Jupyter and run!
+
+## Getting Your API Keys
+
+### Google Gemini (Vision + Language)
+1. Go to [Google AI Studio](https://aistudio.google.com)
+2. Click **Get API Key** → **Create API key**
+3. Copy it into your `.env` as `GOOGLE_API_KEY`
+
+> ⚠️ The free tier allows **20 requests per day** for `gemini-2.5-flash`.  
+> Each agent turn counts as 1-3 requests depending on tool usage.  
+> If you hit the limit you'll see a `429 RESOURCE_EXHAUSTED` error — wait until tomorrow.
+
+### Tavily (Web Search)
+1. Go to [tavily.com](https://tavily.com)
+2. Sign up and grab your API key
+3. Copy it into your `.env` as `TAVILY_API_KEY`
+
+## Example Fridge Photo
+The file `food_image_example.jpg` in this repo is the test image used during development.  
+You can upload your own fridge photo when running the notebook!
 
 ## Project Structure
 ```
